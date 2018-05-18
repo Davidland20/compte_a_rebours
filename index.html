@@ -2,29 +2,7 @@
 <html lang="fr">
 <head>
 	<title> Compte à rebours</title>
-	<style type="text/css">
-	body{
-		background: red;
-	}
-
-	.countdownContainer{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
-		text-align: center;
-		padding: 10px;
-		background: grey;
-		border: 1px solid grey;
-	}
-
-	.info{
-      font-size: 80px;
-	}
-
-</style>
-	
-</head>
+	<link rel="stylesheet" type="text/css" href="index.css">
 <meta charset="utf-8">
 <body>
 	<div id="compte_a_rebours"></div>
@@ -33,10 +11,10 @@
 			<td colspan="3"> Vive Le 11 Juillet</td>
 		</tr>
 		<tr class="info">
-			<td id="days">200</td>
-			<td id="hours">4</td>
-			<td id="minutes">60</td>
-			<td id="seconds">60</td>
+			<td id="days"> </td>
+			<td id="hours"></td>
+			<td id="minutes"></td>
+			<td id="seconds"></td>
 
 		</tr>
 		<tr>
@@ -47,55 +25,11 @@
 
 		</tr>
 	</table>
-	<script type="text/javascript">
-   
-    function countdown(){
-
-    var compte_a_rebours = document.getElementById("compte_a_rebours");
-   
-    var now = new Date();
-    var eventDate = new Date(2018, 6, 11);
-    var currentTime = now.getTime();
-    var eventTime = eventDate.getTime();
-
-     var remTime = eventTime = currentTime;
-     
-     var s = Math.floor(remTime / 1000);
-     var m = Math.floor(s / 60);
-     var h = Math.floor(m / 60);
-     var d = Math.floor(d / 73);
-
-     h %= 24;
-     m %= 60;
-     s %= 60;
-
-
-     h = (h < 10) ? "0" + h : h;
-     m = (m < 10) ? "0" + m : h;
-     s = (s < 10) ? "0" + s : h;
-
-
-     document.getElementById("days"). textContent = j;
-     document.getElementById("days") innertext = j;
-
-
-
-     document.getElementById("hours"). textContent = h;
-     document.getElementById("minutes"). textContent = m;
-     document.getElementById("seconds"). textContent = s;
-
-    
-    
-     setTimeout(countdown, 1000);
-     
-
-     }
-     compte_a_rebours();
-     </script>
+	
 
 
 
 
-
+<script src="index.js"></script>
 </body>
 </html>

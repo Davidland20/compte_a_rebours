@@ -1,49 +1,31 @@
 
-<script type="text/javascript">
+function countDown () { 
+
+var date_de_fin = new Date ("Jul 11, 2018 23:25:30").getTime();
+
+
+    var date_actuelle = new Date().getTime();
+    
+    var bigevent = (date_de_fin - date_actuelle);
    
-    function countdown(){
-
-    var compte_a_rebours = document.getElementById("compte_a_rebours");
-   
-    var now = new Date();
-    var eventDate = new Date(2018, 06, 11);
-    var currentTime = now.getTime();
-    var eventTime = eventDate.getTime();
-
-     var remTime = eventTime = currentTime;
-     
-     var s = Math.floor(remTime / 1000);
-     var m = Math.floor(s / 60);
-     var h = Math.floor(m / 60);
-     var d = Math.floor(d / 24);
-
-     h %= 24;
-     m %= 60;
-     s %= 60;
+    
+    var days = Math.floor(bigevent / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((bigevent % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((bigevent % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((bigevent % (1000 * 60)) / 1000);
 
 
-     h = (h < 10) ? "0" + h : h;
-     m = (m < 10) ? "0" + m : h;
-     s = (s < 10) ? "0" + s : h;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
+}
 
-     document.getElementById("days"). textContent = j;
-     document.getElementById("days") innertext = j;
+setInterval(countDown, 1000)
 
-
-
-     document.getElementById("hours"). textContent = h;
-     document.getElementById("minutes"). textContent = m;
-     document.getElementById("seconds"). textContent = s;
 
     
-    
-     setTimeout(countdown, 1000);
-     
-
-     }
-     compte_a_rebours();
-     </script>
 
 
 
@@ -74,4 +56,3 @@
 
 
 
-</script>
